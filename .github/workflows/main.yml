@@ -23,7 +23,7 @@ jobs:
     - name: Compilar o programa
       run: |
         cd src
-        javac Main.java
+        javac classTest.java
     - name: Rodar o programa
       run: |
         cd src 
