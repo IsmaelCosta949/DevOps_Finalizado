@@ -20,11 +20,15 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: Compilar o programa
+    - name: Compilar teste
       run: |
         cd src
         javac classTest.java
-    - name: Rodar o programa
+    - name: Compilar projeto
+      run: |
+        cd src
+        javac -cp . Main.java
+    - name: Executar o teste
       run: |
         cd src 
         java classTest
