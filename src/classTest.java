@@ -17,7 +17,5 @@ public class classTest {
             System.out.println(lista_colaboradores.get(i).toString());
         }
 
-        throw new Exception("Teste Erro");
-
     }
 }
