@@ -24,11 +24,11 @@ jobs:
       run: |
         cd src
         javac classTest.java
-    - name: Compilar projeto
-      run: |
-        cd src
-        javac -cp . Main.java
     - name: Executar o teste
       run: |
         cd src 
         java classTest
+    - name: Compilar projeto
+      run: |
+        cd src
+        javac -cp . Main.java
