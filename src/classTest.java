@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class classTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         List<Colaboradoes_Parceiros> lista_colaboradores = new ArrayList<Colaboradoes_Parceiros>();
 
@@ -16,6 +16,8 @@ public class classTest {
         for (int i = 0; i < lista_colaboradores.size(); i++){
             System.out.println(lista_colaboradores.get(i).toString());
         }
+
+        throw new Exception("Teste Erro");
 
     }
 }
