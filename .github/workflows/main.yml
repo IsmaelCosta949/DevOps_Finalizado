@@ -32,3 +32,15 @@ jobs:
       run: |
         cd src
         javac -cp . Main.java
+        
+    - uses: actions/checkout@v3
+      name: Check out code
+    - uses: mr-smithers-excellent/docker-build-push@v6
+      name: Build & push Docker image
+      with:
+        image: ismaelcosta949/aula_maven_2f
+        tags: 1.0, 1.1
+        registry: docker.io
+        dockerfile: dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
