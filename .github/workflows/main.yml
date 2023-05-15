@@ -39,7 +39,8 @@ jobs:
       name: Build & push Docker image
       with:
         image: ismaelcosta949/aula_maven_2f
-        tags: 1.0, 1.1
+#         Versionamento
+        tags: ${{github.run number}}
         registry: docker.io
         dockerfile: dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
